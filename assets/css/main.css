@@ -175,10 +175,18 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+@media (max-width: 1199px) {
+  .header {
+      padding: 20px 0 !important;
+  }
+}
+
+
+
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 0 0;
   transition: all 0.5s;
   z-index: 997;
 }
