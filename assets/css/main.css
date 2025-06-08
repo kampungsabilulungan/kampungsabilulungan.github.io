@@ -1073,15 +1073,18 @@ section,
 }
 
 .stats .img-crop {
-  width: 100%;         /* atur sesuai kebutuhan */
+  width: 100%;
+  /* atur sesuai kebutuhan */
   overflow: hidden;
 }
 
 .stats .img-crop img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* crop bagian tengah */
-  object-position: center,center; /* bisa atur ke top / bottom / left */
+  object-fit: cover;
+  /* crop bagian tengah */
+  object-position: center, center;
+  /* bisa atur ke top / bottom / left */
 }
 
 .stats .stats-item {
@@ -1108,21 +1111,29 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-.services {
-  background-image: url('/assets/img/addon/bg-services.png');
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: auto 50%;
+@media (min-width: 992px) {
+  .services#fasility {
+    background-image: url('/assets/img/addon/bg-services.png'), url('/assets/img/addon/bg-services.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right calc(300px + 100px);
+    background-size: auto 50%, auto 50%;
+  }
+
+  .services#fasility-addon {
+    background-image: url('/assets/img/addon/bg-services.png');
+    background-repeat: no-repeat;
+    background-position: left calc(300px + 100px);
+    background-size: auto 50%;
+  }
 }
 
-.services#fasility-addon {
-  background-image: url('/assets/img/addon/bg-services.png');
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: auto 50%;
+.services .section-title h2 {
+  color: #00a338;
 }
 
-
+.services .section-title h2:hover {
+  color: #068231;
+}
 
 .services .service-item {
   position: relative;
@@ -1454,30 +1465,8 @@ section,
   line-height: 0;
 }
 
-.pricing .icon::before {
-  position: absolute;
-  content: "";
-  height: 86px;
-  width: 86px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--default-color), transparent 80%);
-  transition: all 0.3s ease-out 0s;
-  transform: translateZ(-1px);
-}
-
-.pricing .icon::after {
-  position: absolute;
-  content: "";
-  height: 102px;
-  width: 102px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  transition: all 0.3s ease-out 0s;
-  transform: translateZ(-2px);
-}
-
 .pricing h4 {
-  font-size: 48px;
+  font-size: 32.5px;
   color: var(--default-color);
   font-weight: 700;
   font-family: var(--heading-font);
@@ -1510,7 +1499,7 @@ section,
 }
 
 .pricing ul i {
-  color: #059652;
+  color: #000000;
   font-size: 24px;
   padding-right: 3px;
 }
@@ -1547,7 +1536,7 @@ section,
 
 .pricing .featured {
   /* z-index: 10; */
-  border: 3px solid var(--accent-color-green);
+  border: 1px solid var(--default-color);
 }
 
 @media (min-width: 992px) {
@@ -1791,6 +1780,12 @@ section,
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
+.testimonials {
+  background-image: url('/assets/img/addon/bg-about.png');
+  background-position: top;
+  background-size: auto 100%;
+}
+
 .testimonials .info h3 {
   font-weight: 700;
   font-size: 32px;
@@ -1962,9 +1957,22 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+
+.contact .section-title h2 {
+  color: #00a338;
+}
+
+.contact .section-title h2:hover {
+  color: #068432;
+}
+
+
 .contact .info-item {
   background: color-mix(in srgb, var(--default-color), transparent 96%);
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .contact .info-item i {
@@ -1987,7 +1995,6 @@ section,
 }
 
 .contact .php-email-form {
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
   padding: 30px;
   height: 100%;
 }
