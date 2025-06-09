@@ -22,3 +22,5 @@ build/
 *.min.js
 *.min.css
 *.map
+
+*.htaccess
