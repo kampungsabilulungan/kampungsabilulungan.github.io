@@ -81,3 +81,18 @@ document.querySelectorAll(".btn-get-started").forEach(function (btn) {
     window.location.href = window.location.origin + "/#contact";
   });
 });
+
+document.querySelectorAll(".buy-btn").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    const paket = this.getAttribute("data-paket");
+    if (paket) {
+      const subjectInput = document.querySelector('textarea[name="message"]');
+      if (subjectInput) subjectInput.value = "beli paket: " + paket;
+    }
+
+    const contactSection = document.getElementById("contact-form");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});

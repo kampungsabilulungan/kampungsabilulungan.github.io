@@ -1141,6 +1141,16 @@ section,
   }
 }
 
+.services .section-title h2:before,
+.services .section-title h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #00a338;
+  display: inline-block;
+}
+
+
 .services .section-title h2 {
   color: #00a338;
 }
@@ -1351,6 +1361,17 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+
+.portfolio .section-title h2:before,
+.portfolio .section-title h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: var(--accent-color);
+  display: inline-block;
+}
+
+
 .portfolio {
   background-image: url('/assets/img/addon/bg-portofolio.png');
   background-repeat: no-repeat;
@@ -1461,6 +1482,20 @@ section,
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
+.pricing .section-title h2:before,
+.pricing .section-title h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: var(--accent-color-green);
+  display: inline-block;
+}
+
+.pricing .section-title h2 {
+  color: var(--accent-color-green);
+}
+
+
 .pricing {
   padding: 60px 0 120px 0;
 }
@@ -1996,6 +2031,14 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact .section-title h2:before,
+.contact .section-title h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #00a338;
+  display: inline-block;
+}
 
 .contact .section-title h2 {
   color: #00a338;
