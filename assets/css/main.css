@@ -1141,6 +1141,17 @@ section,
   }
 }
 
+@media (max-width: 500px) {
+  .services .section-title h2:before,
+  .services .section-title h2:after {
+    content: "";
+    width: 0px !important;
+    height: 2px;
+    background: #00a338;
+    display: inline-block;
+  }
+}
+
 .services .section-title h2:before,
 .services .section-title h2:after {
   content: "";
