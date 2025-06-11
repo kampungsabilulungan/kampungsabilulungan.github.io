@@ -13,9 +13,9 @@
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #32353a;
   /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #e84545;
+  --accent-color: #ee1b22;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --accent-color-yellow: #f4b400;
+  --accent-color-yellow: #FFDD23;
   /* Kuning emas lembut, selaras tanpa terlalu terang */
   --accent-color-green: #43a047;
   /* Hijau alami dan lembut */
@@ -60,11 +60,11 @@
   --contrast-color: #ffffff;
 }
 
-.red-backgorund {
+.red-background {
   background-color: #ee1b22 !important;
 }
 
-.red-backgorund:hover {
+.red-background:hover {
   background-color: #d1171d !important;
 }
 
@@ -74,6 +74,40 @@
 
 .red-text:hover {
   color: #d1171d !important;
+}
+
+
+.yellow-background {
+  background-color: #FFDD23 !important;
+}
+
+.yellow-background:hover {
+  background-color: #dfc429 !important;
+}
+
+.yellow-text {
+  color: #FFDD23 !important;
+}
+
+.yellow-text:hover {
+  color: #dfc429 !important;
+}
+
+
+.green-background {
+  background-color: #00a338 !important;
+}
+
+.green-background:hover {
+  background-color: #11953f !important;
+}
+
+.green-text {
+  color: #00a338 !important;
+}
+
+.green-text:hover {
+  color: #11953f !important;
 }
 
 
@@ -780,14 +814,6 @@ section,
   position: relative;
 }
 
-.section-title h2:before,
-.section-title h2:after {
-  content: "";
-  width: 50px;
-  height: 2px;
-  background: var(--accent-color-black);
-  display: inline-block;
-}
 
 .section-title h2:before {
   margin: 0 15px 10px 0;
@@ -948,18 +974,22 @@ section,
 }
 
 .about .content h3 {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 28px;
+  font-weight: 700;
   line-height: 19px;
-  padding: 10px 20px;
-  background: color-mix(in srgb, var(--accent-color-green), transparent 95%);
-  color: var(--accent-color-green);
+  padding: 5px 15px;
+  color: var(--accent-color);
   border-radius: 7px;
   display: inline-block;
 }
 
 .about .content h2 {
   font-weight: 700;
+  color: var(--contrast-color);
+  background-color: var(--accent-color-green);
+  padding: 5px 15px;
+  border-radius: 15px;
+  width: 90%;
 }
 
 .about .content p:last-child {
@@ -1134,32 +1164,13 @@ section,
   }
 
   .services#fasility-addon {
-    background-image: url('/assets/img/addon/bg-services.png');
-    background-repeat: no-repeat;
-    background-position: left calc(350px + 100px);
-    background-size: auto 50%;
+    background-image: url('/assets/img/addon/bg-services-2.png'), url('/assets/img/addon/bg-services-2.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right calc(300px + 100px);
+    background-size: auto 25%, auto 25%;
   }
 }
 
-@media (max-width: 500px) {
-  .services .section-title h2:before,
-  .services .section-title h2:after {
-    content: "";
-    width: 0px !important;
-    height: 2px;
-    background: #00a338;
-    display: inline-block;
-  }
-}
-
-.services .section-title h2:before,
-.services .section-title h2:after {
-  content: "";
-  width: 50px;
-  height: 2px;
-  background: #00a338;
-  display: inline-block;
-}
 
 
 .services .section-title h2 {
@@ -1215,7 +1226,18 @@ section,
   left: 0;
   width: 30px;
   height: 2px;
-  background: var(--accent-color-blue);
+  background: var(--accent-color-green);
+  border-right: 5px solid var(--background-color);
+}
+
+.services#fasility-addon .service-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--accent-color);
   border-right: 5px solid var(--background-color);
 }
 
@@ -1242,7 +1264,20 @@ section,
   content: "";
   height: 30px;
   width: 30px;
-  background: color-mix(in srgb, var(--accent-color-blue), transparent 70%);
+  background: color-mix(in srgb, var(--accent-color-green), transparent 70%);
+  border-radius: 50px;
+  z-index: 1;
+  bottom: -15px;
+  right: -15px;
+  transition: 0.3s;
+}
+
+.services#fasility-addon .service-item .icon:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  background: color-mix(in srgb, var(--accent-color), transparent 70%);
   border-radius: 50px;
   z-index: 1;
   bottom: -15px;
@@ -1257,11 +1292,35 @@ section,
 }
 
 .services .service-item .title a {
-  color: var(--heading-color);
+  color: var(--contrast-color);
+  background-color: var(--accent-color-green);
+  font-weight: 400;
+  padding: 5px 15px;
+  border-radius: 15px;
 }
 
 .services .service-item .title a:hover {
-  color: var(--accent-color-blue);
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  font-weight: 400;
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+.services#fasility-addon .service-item .title a {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  font-weight: 400;
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+.services#fasility-addon .service-item .title a:hover {
+  color: var(--contrast-color);
+  background-color: var(--accent-color-green);
+  font-weight: 400;
+  padding: 5px 15px;
+  border-radius: 15px;
 }
 
 .services .service-item .description {
@@ -1373,15 +1432,6 @@ section,
 # Portfolio Section
 --------------------------------------------------------------*/
 
-.portfolio .section-title h2:before,
-.portfolio .section-title h2:after {
-  content: "";
-  width: 50px;
-  height: 2px;
-  background: var(--accent-color);
-  display: inline-block;
-}
-
 
 .portfolio {
   background-image: url('/assets/img/addon/bg-portofolio.png');
@@ -1411,6 +1461,7 @@ section,
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
   font-family: var(--heading-font);
+  color: var(--accent-color-green);
 }
 
 .portfolio .portfolio-filters li:hover,
@@ -1493,14 +1544,6 @@ section,
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
-.pricing .section-title h2:before,
-.pricing .section-title h2:after {
-  content: "";
-  width: 50px;
-  height: 2px;
-  background: var(--accent-color-green);
-  display: inline-block;
-}
 
 .pricing .section-title h2 {
   color: var(--accent-color-green);
@@ -1602,20 +1645,21 @@ section,
 }
 
 .pricing .buy-btn {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, #ffffff, transparent 20%);
   display: inline-block;
   padding: 8px 40px 10px 40px;
   border-radius: 50px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border: 1px solid color-mix(in srgb, var(--accent-color-green), transparent 80%);
+  background-color: var(--accent-color-green);
   transition: none;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   font-family: var(--heading-font);
   transition: 0.3s;
 }
 
 .pricing .buy-btn:hover {
-  background-color: var(--accent-color-green);
+  background-color: var(--accent-color);
   color: var(--contrast-color);
 }
 
@@ -2042,21 +2086,13 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .section-title h2:before,
-.contact .section-title h2:after {
-  content: "";
-  width: 50px;
-  height: 2px;
-  background: #00a338;
-  display: inline-block;
-}
 
 .contact .section-title h2 {
-  color: #00a338;
+  color: var(--accent-color);
 }
 
 .contact .section-title h2:hover {
-  color: #068432;
+  color: #d1171d;
 }
 
 
@@ -2071,7 +2107,7 @@ section,
 .contact .info-item i {
   font-size: 38px;
   line-height: 0;
-  color: var(--accent-color-blue);
+  color: var(--accent-color);
 }
 
 .contact .info-item h3 {
@@ -2107,7 +2143,7 @@ section,
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
-  border-color: var(--accent-color-blue);
+  border-color: var(--accent-color);
 }
 
 .contact .php-email-form input[type=text]::placeholder,
@@ -2117,7 +2153,7 @@ section,
 }
 
 .contact .php-email-form button[type=submit] {
-  background: var(--accent-color-blue);
+  background: var(--accent-color);
   color: var(--contrast-color);
   border: 0;
   padding: 10px 30px;
@@ -2126,7 +2162,7 @@ section,
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color-blue), transparent 20%);
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
 /*--------------------------------------------------------------
