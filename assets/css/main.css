@@ -1270,7 +1270,7 @@ section,
   border-radius: 50px;
   z-index: 1;
   bottom: -15px;
-  right: -15px;
+  right: 50px;
   transition: 0.3s;
 }
 
@@ -1283,7 +1283,7 @@ section,
   border-radius: 50px;
   z-index: 1;
   bottom: -15px;
-  right: -15px;
+  right: 50px;
   transition: 0.3s;
 }
 
@@ -1433,17 +1433,6 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
-
-
-.portfolio {
-  background-image: url('/assets/img/addon/bg-portofolio.png');
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: auto 25%;
-}
-
-
-
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -2114,10 +2103,6 @@ section,
 
 #contact-info .info-item{
   min-height: 220px;
-}
-
-.contact .info-item.big {
-  min-height: 225px;
 }
 
 .contact .info-item i {
