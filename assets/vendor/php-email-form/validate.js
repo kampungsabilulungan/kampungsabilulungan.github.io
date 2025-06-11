@@ -39,7 +39,7 @@
     // Format pesan
     const waMessage =
       `Halo, saya ${name}\n` +
-      `Istansi: ${company}\n` +
+      `Instansi: ${company}\n` +
       `Acara: ${subject}\n` +
       `Pesan: ${message}`;
 
