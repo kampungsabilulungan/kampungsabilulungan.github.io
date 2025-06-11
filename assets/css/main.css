@@ -1159,17 +1159,17 @@ section,
 --------------------------------------------------------------*/
 @media (min-width: 992px) {
   .services#fasility {
-    background-image: url('/assets/img/addon/bg-services.png'), url('/assets/img/addon/bg-services.png');
+    background-image: url('/assets/img/addon/bg-services-2.png'), url('/assets/img/addon/bg-services-2.png');
     background-repeat: no-repeat, no-repeat;
     background-position: left top, right calc(300px + 100px);
     background-size: auto 50%, auto 50%;
   }
 
   .services#fasility-addon {
-    background-image: url('/assets/img/addon/bg-services-2.png'), url('/assets/img/addon/bg-services-2.png');
+    background-image: url('/assets/img/addon/bg-services.png'), url('/assets/img/addon/bg-services.png');
     background-repeat: no-repeat, no-repeat;
     background-position: left top, right calc(300px + 100px);
-    background-size: auto 25%, auto 25%;
+    background-size: auto 50%, auto 50%;
   }
 }
 
