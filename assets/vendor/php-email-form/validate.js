@@ -23,7 +23,7 @@
 
   function sendToWhatsApp(form) {
     localStorage.removeItem("sewa_tempat");
-    const phoneNumber = "62895389564627"; // ✅ Ganti dengan nomor tujuan kamu
+    const phoneNumber = "62895610287788"; // ✅ Ganti dengan nomor tujuan kamu
 
     // Ambil data input dari form
     const name = form.querySelector('input[name="name"]')?.value || "";

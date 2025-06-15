@@ -70,12 +70,17 @@
    * Scroll top button
    */
   let scrollTop = document.querySelector(".scroll-top");
+  let shareLink = document.querySelector(".sharelinks");
 
   function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100
-        ? scrollTop.classList.add("active")
-        : scrollTop.classList.remove("active");
+    if (!scrollTop || !shareLink) return;
+
+    if (window.scrollY > 100) {
+      scrollTop.classList.add("active");
+      shareLink.classList.add("active");
+    } else {
+      scrollTop.classList.remove("active");
+      shareLink.classList.remove("active");
     }
   }
   scrollTop.addEventListener("click", (e) => {
