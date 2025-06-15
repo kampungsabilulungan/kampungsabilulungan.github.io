@@ -825,6 +825,7 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+  font-size: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -1168,7 +1169,7 @@ section,
   .services#fasility-addon {
     background-image: url('/assets/img/addon/bg-services.png'), url('/assets/img/addon/bg-services.png');
     background-repeat: no-repeat, no-repeat;
-    background-position: left top, right calc(300px + 100px);
+    background-position: left top, right calc(400px + 100px);
     background-size: auto 50%, auto 50%;
   }
 }
@@ -2129,7 +2130,6 @@ section,
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
-  color: var(--default-color);
 }
 
 
